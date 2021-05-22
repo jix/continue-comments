@@ -1,7 +1,8 @@
 {
-  "name": "continue-comments",
+	"name": "continue-comments",
 	"displayName": "Continue Comments",
 	"description": "",
+	"publisher": "jix",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.52.0"
@@ -10,14 +11,21 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:continue-comments.helloWorld"
+		"onCommand:continue-comments.continueComment"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "continue-comments.helloWorld",
-				"title": "Hello World"
+				"command": "continue-comments.continueComment",
+				"title": "Continue comment on next line"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "continue-comments.continueComment",
+				"key": "shift+enter",
+				"when": "editorTextFocus"
 			}
 		]
 	},
